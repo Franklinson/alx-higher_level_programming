@@ -15,5 +15,7 @@ if LastNumber > 5:
 if LastNumber == 0:
     print(f"Last digit of {number} is {LastNumber} and is 0")
 
+say = f"Last digit of {number} is {LastNumber}"
+
 if (LastNumber < 6) and (LastNumber != 0):
-    print(f"Last digit of {number} is {LastNumber} and is less than 6 and not 0")
+    print(f"{say} and is less than 6 and not 0")
