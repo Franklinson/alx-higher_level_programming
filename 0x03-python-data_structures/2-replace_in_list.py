@@ -4,6 +4,6 @@ def replace_in_list(my_list, idx, element):
         return my_list
 
     else:
-        new_list[idx] = element
+        my_list[idx] = element
 
-        return new_list
+        return my_list
