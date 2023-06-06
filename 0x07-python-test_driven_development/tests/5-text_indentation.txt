@@ -1,0 +1,19 @@
+"""Defines a text-indentation function.
+
+The `text_indentation` function takes a string as input and prints the text with two new lines after each '.', '?', and ':' character. This function helps in formatting the text by adding indentation and line breaks.
+
+Args:
+    text (string): The text to be processed and printed.
+
+Raises:
+    TypeError: If the `text` parameter is not a string.
+
+Example:
+    >>> text_indentation("Hello. How are you? I'm fine.")
+    Hello.
+
+    How are you?
+
+    I'm fine.
+"""
+
