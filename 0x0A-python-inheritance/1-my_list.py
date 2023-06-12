@@ -3,9 +3,7 @@
 
 
 class MyList(list):
-    """
-    A subclass of list that provides a method to print the list in sorted order
-    """
+    """ A subclass of list that provides a method to list in sorted order """
 
     def print_sorted(self):
         """
