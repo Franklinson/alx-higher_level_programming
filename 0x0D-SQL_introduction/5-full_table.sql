@@ -1,2 +1,2 @@
--- creates and shows the desccription of the table
-SHOW CREATE TABLE first_table FROM hbtn_0c_0;
+-- prints the full description of the table first_table
+SHOW CREATE TABLE first_table;
