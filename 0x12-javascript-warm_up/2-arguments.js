@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const myArg = process.argv.lengh - 1;
+const myArg = process.argv.lengh;
 
 if (myArg === 0) {
   console.log('No argument');
