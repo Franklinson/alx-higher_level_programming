@@ -19,6 +19,10 @@ if __name__ == '__main__':
                 BINARY %(state_name)s ORDER BY cities.id ASC", {'state_name': argv[4]})
     rows_selected = db_cursor.fetchall()
 
-    if rows_selected:
-        for row in rows_selected:
-             print(", ".join([row[1])
+    length = 0
+    for row in rows_selected:
+        print(row[0], end="")
+        if length < len(rows_selected) - 1:
+            print(", ", end="")
+        length = length + 1
+    print()
