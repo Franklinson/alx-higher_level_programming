@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""filter to print states with the letter a"""
+"""filter a letters in state"""
 
 from sys import argv
 from model_state import Base, State
@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(engine)
     session = Session()
-    states = session.query(State).filter(State.name.contains('a'))
-
+    states = session.query(State).filter(State.name.ilike('%a%'))\
+                                 .order_by(State.id)
     for state in states:
         print("{}: {}".format(state.id, state.name))
