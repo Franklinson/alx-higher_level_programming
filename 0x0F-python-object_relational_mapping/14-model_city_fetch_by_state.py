@@ -18,5 +18,5 @@ if __name__ == "__main__":
     state_and_city = session.query(City, State).order_by(City.id).\
         join(State, City.state_id == State.id).all()
     for city, state in state_and_city:
-        print("{}:{} {}".format(state.name city.id city.name)
+        print("{}:{} {}".format(state.name, city.id, city.name)
     session.close()
