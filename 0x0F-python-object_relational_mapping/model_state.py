@@ -12,7 +12,7 @@ Base = declarative_base()
 class State(Base):
      """the state class links to the state table"""
 
-    __tablename__ = 'State'
+    __tablename__ = 'state'
 
-    id = Column(integer, primary_key=True, nullable=False)
+    id = Column(Integer, autoincreament=True primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
