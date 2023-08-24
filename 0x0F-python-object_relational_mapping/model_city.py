@@ -3,11 +3,8 @@
 This script defines a City class
 """
 
-from sqlalchemy import Column, Integer, String
-from sqlalchemy import ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()
+from sqlalchemy import Column, Integer, String, ForeignKey
+from model_state import Base, State
 
 
 class City(Base):
