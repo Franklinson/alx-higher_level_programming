@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(engine)
     session = Session()
-    states = session.query(State).filter(State.name.ilike('%a%'))\
-                                 .order_by(State.id)
+    states = session.query(State).filter(State.name.contains('a'))
+
     for state in states:
         print("{}: {}".format(state.id, state.name))
