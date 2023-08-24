@@ -2,6 +2,8 @@
 """
 Lists all Cities and their coresponding state
 """
+
+
 import sys
 from relationship_state import Base, State
 from relationship_city import City
