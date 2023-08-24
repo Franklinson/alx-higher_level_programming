@@ -10,6 +10,8 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 class State(Base):
+     """the state class links to the state table"""
+
     __tablename__ = 'State'
 
     id = Column(integer, primary_key=True, nullable=False)
