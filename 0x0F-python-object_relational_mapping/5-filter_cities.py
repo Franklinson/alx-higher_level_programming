@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This takes an argument and displays the lists of cities in the state  that match with the argument in the database
-These also prevents sql injections
+This script  takes in the name of a state
+as an argument and lists all cities of that
+state, using the database `hbtn_0e_4_usa`.
 """
 
 import MySQLdb as db
