@@ -21,4 +21,4 @@ if __name__ == "__main__":
     password = sys.argv[2]
 
     github_id = get_github_id(username, password)
-    print(f"Your GitHub ID is: {github_id}")
+    print(f"{github_id}")
