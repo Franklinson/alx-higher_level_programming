@@ -26,7 +26,7 @@ if __name__ == "__main__":
     status_code, content = fetch_url_content(url)
 
     if content is not None:
-        print(f"HTTP Status Code: {status_code}")
+        print(f"Error code: {status_code}")
         print(content)
     else:
         print(f"Error code: {status_code}")
