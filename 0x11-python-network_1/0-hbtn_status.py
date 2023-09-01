@@ -6,10 +6,9 @@ import urllib.request
 if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
 
-    try:
-        with urllib.request.urlopen(url) as response:
-            html_content = response.read()
-            encoding = response.info().get_content_charset()
+    with urllib.request.urlopen(url) as response:
+        html_content = response.read()
+        encoding = response.info().get_content_charset()
 
         print("Body response:")
         print("\t- type: {}".format(type(html_content)))
