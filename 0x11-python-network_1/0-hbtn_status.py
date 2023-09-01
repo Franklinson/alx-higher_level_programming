@@ -12,7 +12,7 @@ if __name__ == "__main__":
             encoding = response.info().get_content_charset()
 
         print("Body response:")
-        print("\t- type: {}".format(type(html_content.decode(encoding))))
+        print("\t- type: {}".format(type(html_content)))
         print("\t- content: {}".format(html_content.decode(encoding)))
         print("\t- utf8 content: {}".format(html_content.decode('utf-8')))
     except urllib.error.URLError as e:
