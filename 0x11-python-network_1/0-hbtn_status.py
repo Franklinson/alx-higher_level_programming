@@ -15,5 +15,3 @@ if __name__ == "__main__":
         print("\t- type: {}".format(type(html_content)))
         print("\t- content: {}".format(html_content.decode(encoding)))
         print("\t- utf8 content: {}".format(html_content.decode('utf-8')))
-    except urllib.error.URLError as e:
-        print("Error: Unable to fetch the URL - {}".format(e.reason))
