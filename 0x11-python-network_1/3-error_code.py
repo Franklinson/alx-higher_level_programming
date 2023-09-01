@@ -5,6 +5,7 @@ import sys
 import urllib.request
 import urllib.error
 
+
 def fetch_url_content(url):
     try:
         with urllib.request.urlopen(url) as response:
@@ -13,6 +14,7 @@ def fetch_url_content(url):
             return status_code, content
     except urllib.error.HTTPError as e:
         return e.code, None
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
