@@ -2,19 +2,16 @@
 
 const fs = require('fs').promises;
 
-async function writeStringToFile (filePath, content) {
-  try {
-    await fs.writeFile(filePath, content, 'utf-8');
-    console.log(`String successfully written to ${filePath}`);
-  } catch (err) {
-    console.error(err);
-  }
-}
-
-const [, , filePath, content] = process.argv;
+const [filePath, content] = process.argv.slice(2);
 
 if (!filePath || !content) {
-  console.error('Usage: node script.js <file_path> <string_to_write>');
+  console.error('Usage: node script.js <file-path> <content>');
 } else {
-  writeStringToFile(filePath, content);
+  (async () => {
+    try {
+      await fs.writeFile(filePath, content, 'utf-8');
+    } catch (error) {
+      console.error(error);
+    }
+  })();
 }
