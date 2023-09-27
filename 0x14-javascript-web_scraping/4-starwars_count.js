@@ -1,27 +1,21 @@
 #!/usr/bin/node
 
 const request = require('request');
-const argv = process.argv;
-const starApi = argv[2];
-const character = 'https://swapi-api.hbtn.io/api/people/18/';
 
-request(starApi, function (error, response, body) {
+const API_URL = 'https://swapi-api.alx-tools.com/api/films/';
+const WEDGE_ANTILLES_ID = 18;
+
+const urlWithFilter = `${API_URL}?characters=${WEDGE_ANTILLES_ID}`;
+
+request.get(urlWithFilter, (error, response, body) => {
   if (error) {
-    console.error(error);
+    console.error('Error:', error);
     return;
   }
 
-  let count = 0;
+  const filmsData = JSON.parse(body);
 
-  const data = JSON.parse(body);
+  const numMovies = filmsData.count;
 
-  if (data.results) {
-    for (const film of data.results) {
-      if (film.characters.includes(character)) {
-        count++;
-      }
-    }
-  }
-
-  console.log(count);
+  console.log(numMovies);
 });
