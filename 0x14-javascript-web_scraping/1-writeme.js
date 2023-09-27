@@ -1,17 +1,16 @@
 #!/usr/bin/node
 
-const fs = require('fs').promises;
+const fs = require('fs');
 
-const [filePath, content] = process.argv.slice(2);
+const filename = process.argv[2];
+const content = process.argv[3];
 
-if (!filePath || !content) {
+if (!filename || !content) {
   console.error('Usage: node script.js <file-path> <content>');
 } else {
-  (async () => {
-    try {
-      await fs.writeFile(filePath, content, 'utf-8');
-    } catch (error) {
+  fs.writeFile(filename, content, 'utf-8', (error) => {
+    if (error) {
       console.error(error);
     }
-  })();
+  });
 }
